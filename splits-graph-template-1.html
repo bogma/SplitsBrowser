@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" type="text/css" href="css/styles.css">
+ <title>Page title</title>
+ <script type="text/javascript" charset="utf-8" src="modernizr-2.7.1-svg.min.js"></script>
+ <script type="text/javascript">
+  if (!Modernizr.svg) {
+    document.location = "unsupported-browser.html";
+  }
+ </script>
+ <script type="text/javascript" charset="utf-8" src="jquery-3.4.1.min.js"></script>
+ <script type="text/javascript" charset="utf-8" src="d3.v5.min.js"></script>
+ <script type="text/javascript" charset="utf-8" src="splitsbrowser.min.js"></script>
+ <script type="text/javascript" charset="utf-8" src="lang/messages-en_gb.js"></script>
+</head>
+<body>
+ <script type="text/javascript">
+  SplitsBrowser.loadEvent('./testdata/SbgCup01_2019_splits.xml');
+ </script>
+ <noscript>
+  <h1>SplitsBrowser &ndash; JavaScript is disabled</h1>
+
+  <p>Your browser is set to disable JavaScript.</p>
+  
+  <p>SplitsBrowser cannot run if JavaScript is not enabled.  Please enable JavaScript in your browser.</p>
+ </noscript>
+</body>
+</html>

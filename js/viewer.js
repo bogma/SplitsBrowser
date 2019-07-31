@@ -315,12 +315,19 @@
     * Construct the UI inside the HTML body.
     */
     Viewer.prototype.buildUi = function () {
-        var body = d3.select("body");
-        body.style("overflow", "hidden");
+        var rootContainer = document.getElementById("sbRoot");
+        if (!rootContainer) {
+            var body = d3.select("body");
+            body.style("overflow", "hidden");
+            this.container = body.append("div")
+                                 .attr("id", "sbContainer");
+        } else {
+            var ele = d3.select("#sbRoot");
+            ele.style("overflow", "hidden");
+            this.container = ele.append("div")
+                                .attr("id", "sbContainer");
+        }
 
-        this.container = body.append("div")
-                             .attr("id", "sbContainer");
-        
         this.topPanel = this.container.append("div");
         
         this.drawLogo();

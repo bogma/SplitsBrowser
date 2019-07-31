@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>SplitsBrowser test</title>
+  <script type="text/javascript" charset="utf-8" src="modernizr-2.7.1-svg.min.js"></script>
+  <script type="text/javascript">
+    if (!Modernizr.svg) {
+      document.location = "unsupported-browser.html";
+    }
+  </script>
+  <script type="text/javascript" charset="utf-8" src="jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="d3.v5.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/core.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/messages.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/util.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/time.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/competitor.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/course-class.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/course-class-set.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/course.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/event.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/chart-types.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/csv-reader.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/data-repair.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/oe-reader.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/html-reader.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/alternative-csv-reader.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/iof-xml-reader.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/input.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/chart-popup-data.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/chart-popup.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/chart.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/competitor-selection.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/statistics-selector.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/class-selector.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/competitor-list.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/comparison-selector.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/chart-type-selector.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/original-data-selector.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/language-selector.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/results-table.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/query-string.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/warning-viewer.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/viewer.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lang/messages-en_gb.js"></script>
+</head>
+
+<body>
+  <h1>Überschrift</h1>
+  <div style="background: green;">
+    <p>Test</p>
+    <div id="sbRoot"></div>
+  </div>
+  <script type="text/javascript">
+    SplitsBrowser.loadEvent('./testdata/SbgCup01_2019_splits.xml');
+  </script>
+  <noscript>
+    <h1>SplitsBrowser &ndash; JavaScript is disabled</h1>
+
+    <p>Your browser or is set to disable JavaScript.</p>
+
+    <p>SplitsBrowser cannot run if JavaScript is not enabled. Please enable JavaScript in your browser.</p>
+  </noscript>
+
+  <footer id="footer" class="uk-section uk-section-secondary uk-section-small">
+    <div class="uk-container">
+      <div class="uk-grid uk-grid-large" uk-grid>
+        <div class="uk-text-small uk-text-center uk-width-expand">© 2019 SOLV - Powered by <a href="//gohugo.io">Hugo</a> and <a href="//getuikit.com">UIkit</a></div>
+        <div class="uk-text-right">
+           aktualisiert am  12. Apr 2019 (00:52)
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
