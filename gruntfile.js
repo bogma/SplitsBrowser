@@ -104,6 +104,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        copy: {
+            minjs: {
+                files: [
+                    { src: 'splitsbrowser*.min.js', dest: '../solv_website/static/js/' }
+                ]
+            }
+        },
         qunit: {
             src: ['qunit-tests.html'],
             languages: ['qunit-languages-tests.html'],
@@ -153,9 +160,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
+    grunt.registerTask('deploy', ['concat', 'uglify:data', 'uglify:dist', 'copy:minjs']);
     grunt.registerTask('test', ['jshint', 'qunit:src', 'qunit:languages']);
-
     grunt.registerTask('data', ['jshint', 'qunit:src', 'concat:data', 'uglify:data', 'qunit:minified-data']);
     grunt.registerTask('default', ['jshint', 'qunit:src', 'qunit:languages', 'concat:dist', 'uglify:dist', 'qunit:minified']);
     grunt.registerTask('all', ['jshint', 'qunit:src', 'qunit:languages', 'concat:dist', 'uglify:dist', 'qunit:minified', 'concat:data', 'uglify:data', 'qunit:minified-data']);
